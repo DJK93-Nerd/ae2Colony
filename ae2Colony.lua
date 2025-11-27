@@ -223,7 +223,7 @@ local function setupPeripherals()
   term.clear()
   term.setCursorPos(1, 1)
 
-  local bridge = peripheral.find("me_bridge") or error("me_bridge missing")
+  local bridge = peripheral.find("rs_bridge") or error("rs_bridge missing")
   local colony = peripheral.find("colony_integrator") or error("colony_integrator missing")
   if colony and not colony.isInColony then error("colony_integrator not in a colony") end
   return bridge, colony, setupMonitor()
